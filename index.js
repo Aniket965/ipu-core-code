@@ -7,10 +7,9 @@ const sha256 = require("sha256");
  * @param {string} rollnumber
  * @param {number} yearcode
  * @param {number} month
- * @param {number} callcode
  * @returns {string} code
  */
-function findCode(rollnumber, yearcode, month, callcode = 0) {
+function findCode(rollnumber, yearcode, month) {
   var code = "";
   if (
     rollnumber.indexOf("039") === 6 ||
@@ -21,10 +20,10 @@ function findCode(rollnumber, yearcode, month, callcode = 0) {
     rollnumber.indexOf("089") === 6 ||
     rollnumber.indexOf("248") === 6 ||
     rollnumber.indexOf("740") === 6 ||
-    rollnumber.indexOf("020") === 6
+    rollnumber.indexOf("020") === 6 ||
+    rollnumber.indexOf("174") === 6
   ) {
     code = rollnumber.substr(6, 3) + yearcode;
-    rollnumber.indexOf("039") ? (callcode = 0) : (callcode = 1);
   } else {
     if (month > 5) {
       var semcode = (yearcode - parseInt(rollnumber.substring(9, 11))) * 2;
