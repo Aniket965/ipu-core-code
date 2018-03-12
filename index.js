@@ -21,6 +21,7 @@ function findCode(rollnumber, yearcode, month) {
     rollnumber.indexOf("248") === 6 ||
     rollnumber.indexOf("740") === 6 ||
     rollnumber.indexOf("020") === 6 ||
+    rollnumber.indexOf("024") === 6 ||
     rollnumber.indexOf("174") === 6
   ) {
     code = rollnumber.substr(6, 3) + yearcode;
