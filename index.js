@@ -18,6 +18,7 @@ function findCode(rollnumber, yearcode, month) {
     rollnumber.indexOf("065") === 6 ||
     rollnumber.indexOf("088") === 6 ||
     rollnumber.indexOf("089") === 6 ||
+    rollnumber.indexOf("139") === 6 ||
     rollnumber.indexOf("248") === 6 ||
     rollnumber.indexOf("740") === 6 ||
     rollnumber.indexOf("020") === 6 ||
